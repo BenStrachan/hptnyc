@@ -23,6 +23,7 @@
 class Practitioner < ApplicationRecord
   PROFESSIONS = [
     "Physiotherapist",
+    "Physical Therapist",
     "Podiatrist",
     "Occupational Therapist",
     "Psychologist",
@@ -56,7 +57,7 @@ class Practitioner < ApplicationRecord
   private
   def set_full_name
     if first_name_changed? || last_name_changed?
-      self.full_name = [first_name, last_name].join(" ") 
+      self.full_name = [first_name, last_name].join(" ")
     end
   end
 end
