@@ -51,8 +51,7 @@ class Practitioner < ApplicationRecord
   has_attached_file :avatar, styles: { medium: "450x450>" }
   validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\z/
 
-  validates_presence_of :first_name, :last_name, :profession
-  validates :profession, inclusion: { in: PROFESSIONS }
+  validates_presence_of :first_name, :last_name
 
   private
   def set_full_name
